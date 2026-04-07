@@ -19,6 +19,7 @@ public class ProductService {
     }
 
     public Product createProduct(Product product) {
+        //validacao
         if(product.getName() == null){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Produto precisa ter um nome");
         }
